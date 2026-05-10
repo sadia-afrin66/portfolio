@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Sadia Afrin</title>
+    <style>
+        /* ১. ক্লিন প্রফেশনাল সেটআপ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f9ff;
+            color: #102a43;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ২. নেভিগেশন বার */
+        nav {
+            background: #102a43;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-logo img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #00d4ff; }
+        .nav-logo span { font-weight: bold; font-size: 1.2rem; letter-spacing: 1px; }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: #00d4ff; }
+
+        /* ৩. ওপেন-স্টাইল কন্টাক্ট সেকশন (বক্স ছাড়া) */
+        .contact-hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at top right, #e3f2fd, transparent);
+        }
+
+        .contact-hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #102a43;
+            animation: slideUp 1s ease;
+        }
+
+        .contact-hero h1 span { color: #0091ea; }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            color: #486581;
+            max-width: 650px;
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        /* ৪. আকর্ষণীয় হোয়াটসঅ্যাপ বাটন */
+        .wa-action-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            text-decoration: none;
+            padding: 22px 50px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.4s;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 45px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-icon {
+            width: 35px;
+            height: 35px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .alternative-contact {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #627d98;
+        }
+
+        .email-btn {
+            color: #102a43;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid #0091ea;
+            transition: 0.3s;
+        }
+
+        .email-btn:hover { color: #0091ea; }
+
+        /* এনিমেশন */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #102a43;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        /* মোবাইলের জন্য এডজাস্টমেন্ট */
+        @media (max-width: 768px) {
+            .contact-hero h1 { font-size: 2.8rem; }
+            nav { padding: 15px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="my-photo.jpg" alt="Sadia">
+            <span>SADIA AFRIN</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-hero">
+        <h1>Let's Create <span>Something Great.</span></h1>
+        <p>I am always open to discussing new projects, creative ideas, or financial strategies. Your next big idea is just a message away.</p>
+
+        <div class="wa-action-card">
+            <a href="https://wa.me/8801405253327" target="_blank" class="btn-whatsapp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" class="wa-icon">
+                Chat on WhatsApp
+            </a>
+            
+            <div class="alternative-contact">
+                Or reach me at <a href="mailto:sadia200178@email.com" class="email-btn">sadia200178@email.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SADIA AFRIN | khulna, BANGLADESH
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Sadia Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e3f2fd; /* Light Sky Blue Background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #102a43; /* Deep Navy Blue */
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #81d4fa; }
+
+        /* Container & Header */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .header-text { text-align: center; margin-bottom: 50px; }
+        .header-text h1 { font-size: 2.5rem; color: #102a43; margin-bottom: 10px; }
+        .header-text p { color: #546e7a; font-size: 1.1rem; }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Design */
+        .service-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border-bottom: 6px solid #102a43;
+        }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(16, 42, 67, 0.15);
+            border-bottom: 6px solid #0091ea;
+        }
+        .service-card h3 { color: #102a43; font-size: 1.4rem; margin-bottom: 15px; }
+        .service-card p { color: #627d98; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 40px 0; color: #102a43; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="header-text">
+            <h1>Our Professional Services</h1>
+            <p>High-Quality Digital Solutions for Your Business</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Digital Marketing</h3>
+                <p>Advanced SEO, Social Media Strategy, and Content Planning.</p>
+            </div>
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <p>Creative visual identities, professional logos, and aesthetic posts.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Building responsive, fast, and modern websites using HTML & CSS.</p>
+            </div>
+            <div class="service-card">
+                <h3>Finance & Data</h3>
+                <p>Expert accounting management and financial reporting services.</p>
+            </div>
+            <div class="service-card">
+                <h3>Ads Campaign</h3>
+                <p>Professional Facebook and Google Ads management for your business.</p>
+            </div>
+            <div class="service-card">
+                <h3>Content Writing</h3>
+                <p>Compelling and SEO-friendly content for blogs and websites.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sadia | Built with Code & Passion</p>
+    </footer>
+
+</body>
+</html>

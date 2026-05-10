@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sadia Afrin | Finance & Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* ১. গ্লোবাল সেটআপ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #102a43;
+            line-height: 1.8;
+        }
+
+        /* ২. নেভিগেশন বার */
+        nav {
+            background: #102a43;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #00d4ff; }
+        .nav-logo span { font-weight: bold; }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: #00d4ff; }
+
+        /* ৩. আধুনিক সেকশন লেআউট */
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 90vh;
+            align-items: center;
+        }
+
+        /* বাম পাশের ইমেজ সেকশন */
+        .image-side {
+            flex: 1;
+            min-width: 500px;
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            background: #f8fbff;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            z-index: 2;
+            position: relative;
+            box-shadow: 25px 25px 0px #0091ea;
+        }
+
+        /* ডান পাশের টেক্সট সেকশন */
+        .text-side {
+            flex: 1;
+            min-width: 500px;
+            padding: 80px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0091ea;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .text-side h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: #102a43;
+        }
+
+        .text-side h1 span {
+            color: #0091ea;
+        }
+
+        .text-side p {
+            font-size: 1.1rem;
+            color: #486581;
+            margin-bottom: 25px;
+        }
+
+        /* স্কিল হাইলাইটস */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .skill-box {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            border-left: 4px solid #102a43;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateX(10px);
+            background: #e3f2fd;
+        }
+
+        .check-icon {
+            color: #25d366;
+            font-weight: bold;
+        }
+
+        /* ৪. ফুটার */
+        footer {
+            background: #102a43;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* রেসপন্সিভ */
+        @media (max-width: 1000px) {
+            .image-side, .text-side { min-width: 100%; padding: 40px; }
+            .image-container img { width: 300px; height: 400px; }
+            .text-side h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="my-photo.jpg" alt="Sadia">
+            <span>SADIA AFRIN</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="image-side">
+            <div class="image-container">
+                <img src="my-photo.jpg.jpg" alt="Sadia Afrin">
+            </div>
+        </div>
+
+        <div class="text-side">
+            <div class="badge">Professional Profile</div>
+            <h1>Blending Finance with <span>Modern Web Tech</span></h1>
+            
+            <p>
+                I am <strong>Sadia Afrin</strong>, a Finance graduate with a vision to bridge the gap between financial intelligence and digital innovation. After completing my BBA (Honours) in Finance in 2023, I decided to transition into the tech world to build more impactful solutions.
+            </p>
+
+            <p>
+                Currently, I am deeply focused on <strong>Web Development</strong>, mastering HTML, CSS, and modern design principles. My goal is to create high-performance, aesthetically pleasing websites that serve as powerful tools for businesses.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-box"><span class="check-icon">✓</span> Web Development</div>
+                <div class="skill-box"><span class="check-icon">✓</span> Financial Analysis</div>
+                <div class="skill-box"><span class="check-icon">✓</span> Digital Strategy</div>
+                <div class="skill-box"><span class="check-icon">✓</span> Graphic Design</div>
+                <div class="skill-box"><span class="check-icon">✓</span> Accounting Mgmt</div>
+                <div class="skill-box"><span class="check-icon">✓</span> Content Planning</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SADIA AFRIN | Driven by Innovation
+    </footer>
+
+</body>
+</html>
