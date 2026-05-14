@@ -5,18 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Sadia Portfolio</title>
     <style>
+        /* ১. রিসেট ও বেসিক স্টাইল */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #e3f2fd; /* Light Sky Blue Background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd;
             color: #333;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Navigation Bar */
+        /* ২. ডার্ক মোড স্পেশাল CSS (প্রফেশনাল লুকের জন্য) */
+        .dark-theme {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .header-text h1 { color: #ffffff !important; }
+        .dark-theme .header-text p { color: #b0c4de !important; }
+
+        /* ডার্ক মোডে কার্ডের লুক পরিবর্তন */
+        .dark-theme .service-card {
+            background: #1e1e1e !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+            border-bottom: 6px solid #00d4ff !important;
+        }
+
+        .dark-theme .service-card h3 { color: #00d4ff !important; }
+        .dark-theme .service-card p { color: #b0b0b0 !important; }
+        
+        .dark-theme footer p { color: #ffffff !important; }
+
+        /* ৩. নেভিগেশন বার */
         nav {
-            background: #102a43; /* Deep Navy Blue */
+            background: #102a43;
             padding: 18px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -32,7 +55,7 @@
         }
         nav a:hover { color: #81d4fa; }
 
-        /* Container & Header */
+        /* ৪. কন্টেইনার ও হেডার */
         .container {
             max-width: 1200px;
             margin: 60px auto;
@@ -42,14 +65,13 @@
         .header-text h1 { font-size: 2.5rem; color: #102a43; margin-bottom: 10px; }
         .header-text p { color: #546e7a; font-size: 1.1rem; }
 
-        /* Services Grid */
+        /* ৫. সার্ভিস গ্রিড ও কার্ড */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        /* Card Design */
         .service-card {
             background: #ffffff;
             padding: 40px 30px;
@@ -71,6 +93,13 @@
     </style>
 </head>
 <body>
+
+    <!-- ডার্ক মোড বাটন সেকশন -->
+    <div style="background: #102a43; text-align: right; padding: 10px;">
+        <button type="button" onclick="toggleDarkMode()" style="padding: 8px 15px; cursor: pointer; border-radius: 20px; border: 1px solid #00d4ff; background: transparent; color: white; font-weight: bold;">
+            Switch Appearance 🌙/☀️
+        </button>
+    </div>
 
     <nav>
         <a href="index.html">Home</a>
@@ -116,6 +145,14 @@
     <footer>
         <p>&copy; 2026 Sadia | Built with Code & Passion</p>
     </footer>
+
+    <!-- জাভাস্ক্রিপ্ট ফাংশন -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-theme");
+            console.log("Dark Mode Toggled!");
+        }
+    </script>
 
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Sadia Afrin | Finance & Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* ১. গ্লোবাল সেটআপ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
@@ -14,34 +14,77 @@
             background-color: #ffffff;
             color: #102a43;
             line-height: 1.8;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* ২. নেভিগেশন বার */
+        /* ডার্ক মোড স্টাইল */
+        .dark-theme {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .image-side { background-color: #1a1a1a !important; }
+        .dark-theme .text-side h1 { color: #ffffff !important; }
+        .dark-theme .text-side p { color: #b0c4de !important; }
+        .dark-theme .skill-box { 
+            background: #252525 !important; 
+            color: #ffffff !important; 
+            border-left: 4px solid #00d4ff !important;
+        }
+        .dark-theme .badge { background: #333 !important; color: #00d4ff !important; }
+
+        /* --- নেভিগেশন বার মাঝখানে আনার জন্য আপডেট --- */
         nav {
             background: #102a43;
-            padding: 15px 50px;
+            padding: 20px 50px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* লোগো উপরে এবং লিঙ্ক নিচে রাখার জন্য */
+            justify-content: center;
             align-items: center;
+            gap: 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
-        .nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #00d4ff; }
-        .nav-logo span { font-weight: bold; }
+
+        .nav-logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            text-decoration: none; 
+            color: white; 
+        }
+
+        .nav-logo img { 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid #00d4ff; 
+        }
+
+        .nav-logo span { 
+            font-weight: bold; 
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* লিঙ্কগুলোর মাঝে গ্যাপ */
+        }
 
         .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
-            margin-left: 25px;
             font-weight: 600;
             font-size: 14px;
             transition: 0.3s;
         }
+        /* -------------------------------------- */
+
         .nav-links a:hover { color: #00d4ff; }
 
-        /* ৩. আধুনিক সেকশন লেআউট */
+        /* আধুনিক সেকশন লেআউট */
         .about-container {
             display: flex;
             flex-wrap: wrap;
@@ -49,7 +92,6 @@
             align-items: center;
         }
 
-        /* বাম পাশের ইমেজ সেকশন */
         .image-side {
             flex: 1;
             min-width: 500px;
@@ -57,10 +99,7 @@
             display: flex;
             justify-content: center;
             background: #f8fbff;
-        }
-
-        .image-container {
-            position: relative;
+            transition: 0.3s;
         }
 
         .image-container img {
@@ -73,24 +112,10 @@
             box-shadow: 25px 25px 0px #0091ea;
         }
 
-        /* ডান পাশের টেক্সট সেকশন */
         .text-side {
             flex: 1;
             min-width: 500px;
             padding: 80px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #e3f2fd;
-            color: #0091ea;
-            padding: 5px 15px;
-            border-radius: 5px;
-            font-weight: 800;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
         }
 
         .text-side h1 {
@@ -101,9 +126,7 @@
             color: #102a43;
         }
 
-        .text-side h1 span {
-            color: #0091ea;
-        }
+        .text-side h1 span { color: #0091ea; }
 
         .text-side p {
             font-size: 1.1rem;
@@ -131,17 +154,8 @@
             transition: 0.3s;
         }
 
-        .skill-box:hover {
-            transform: translateX(10px);
-            background: #e3f2fd;
-        }
+        .skill-box:hover { transform: translateX(10px); background: #e3f2fd; }
 
-        .check-icon {
-            color: #25d366;
-            font-weight: bold;
-        }
-
-        /* ৪. ফুটার */
         footer {
             background: #102a43;
             color: white;
@@ -150,7 +164,6 @@
             font-weight: 600;
         }
 
-        /* রেসপন্সিভ */
         @media (max-width: 1000px) {
             .image-side, .text-side { min-width: 100%; padding: 40px; }
             .image-container img { width: 300px; height: 400px; }
@@ -160,9 +173,15 @@
 </head>
 <body>
 
+    <div style="text-align: right; padding: 10px; background: #102a43;">
+        <button type="button" onclick="toggleDarkMode()" style="padding: 8px 15px; cursor: pointer; border-radius: 20px; border: 1px solid #00d4ff; background: transparent; color: white;">
+            Switch Appearance 🌙/☀️
+        </button>
+    </div>
+
     <nav>
         <a href="index.html" class="nav-logo">
-            <img src="my-photo.jpg" alt="Sadia">
+            <img src="my-photo.jpg.jpg" alt="Sadia">
             <span>SADIA AFRIN</span>
         </a>
         <div class="nav-links">
@@ -181,7 +200,6 @@
         </div>
 
         <div class="text-side">
-            <div class="badge">Professional Profile</div>
             <h1>Blending Finance with <span>Modern Web Tech</span></h1>
             
             <p>
@@ -193,12 +211,12 @@
             </p>
 
             <div class="skills-grid">
-                <div class="skill-box"><span class="check-icon">✓</span> Web Development</div>
-                <div class="skill-box"><span class="check-icon">✓</span> Financial Analysis</div>
-                <div class="skill-box"><span class="check-icon">✓</span> Digital Strategy</div>
-                <div class="skill-box"><span class="check-icon">✓</span> Graphic Design</div>
-                <div class="skill-box"><span class="check-icon">✓</span> Accounting Mgmt</div>
-                <div class="skill-box"><span class="check-icon">✓</span> Content Planning</div>
+                <div class="skill-box">✓ Web Development</div>
+                <div class="skill-box">✓ Financial Analysis</div>
+                <div class="skill-box">✓ Digital Strategy</div>
+                <div class="skill-box">✓ Graphic Design</div>
+                <div class="skill-box">✓ Accounting Mgmt</div>
+                <div class="skill-box">✓ Content Planning</div>
             </div>
         </div>
     </div>
@@ -206,6 +224,13 @@
     <footer>
         &copy; 2026 SADIA AFRIN | Driven by Innovation
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-theme");
+            console.log("Dark Mode Toggled");
+        }
+    </script>
 
 </body>
 </html>

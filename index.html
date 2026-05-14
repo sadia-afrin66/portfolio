@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SADIA AFRIN | Finance & Digital Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
     <style>
-        /* ১. প্রিমিয়াম মডার্ন সেটআপ */
+    .dark-theme, 
+    .dark-theme div, 
+    .dark-theme section, 
+    .dark-theme header, 
+    .dark-theme footer, 
+    .dark-theme p, 
+    .dark-theme h1, 
+    .dark-theme h2, 
+    .dark-theme h3 {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    .dark-theme button {
+        background-color: #444 !important;
+        color: #fff !important;
+        border: 1px solid #fff !important;
+    }
+    </style>
+    <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
@@ -17,30 +37,57 @@
             flex-direction: column;
         }
 
-        /* ২. নেভিগেশন বার */
+        /* --- মেনু বার মাঝখানে আনার জন্য আপডেট --- */
         nav {
             background: #102a43;
-            padding: 15px 50px;
+            padding: 20px 50px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* লোগো উপরে এবং লিঙ্ক নিচে রাখার জন্য */
+            justify-content: center;
             align-items: center;
+            gap: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
-        .nav-logo img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #00d4ff; }
-        .nav-logo span { font-weight: bold; font-size: 1.2rem; letter-spacing: 1px; }
+
+        .nav-logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            text-decoration: none; 
+            color: white; 
+        }
+
+        .nav-logo img { 
+            width: 45px; 
+            height: 45px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid #00d4ff; 
+        }
+
+        .nav-logo span { 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            letter-spacing: 1px; 
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* লিঙ্কগুলোর মাঝে গ্যাপ */
+        }
 
         .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
-            margin-left: 25px;
             font-weight: 600;
             font-size: 14px;
             transition: 0.3s;
         }
+        /* -------------------------------------- */
+
         .nav-links a:hover { color: #00d4ff; }
 
-        /* ৩. হিরো সেকশন - যেখানে সব ফোকাস থাকবে */
         .welcome-container {
             flex: 1;
             display: flex;
@@ -51,84 +98,89 @@
             padding: 50px 20px;
         }
 
-        /* ছবি অনেক বড় এবং আকর্ষণীয় করা (৪০০ পিক্সেল) */
         .main-img {
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
-            border: 15px solid white; /* আরও মোটা বর্ডার */
+            border: 10px solid white;
             object-fit: cover;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
             animation: popIn 1.5s ease;
         }
 
-        /* বড় এবং আকর্ষণীয় টাইটেল */
         .hero-text h1 {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 900;
             line-height: 1;
             color: #102a43;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
+            margin-bottom: 15px;
         }
 
-        .hero-text h1 span {
-            color: #0091ea;
-        }
+        .hero-text h1 span { color: #0091ea; }
 
         .hero-text p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #486581;
-            margin-bottom: 50px;
-            max-width: 800px;
+            margin-bottom: 40px;
+            max-width: 700px;
             font-weight: 500;
         }
 
-        /* ৪. স্টাইলিশ বাটন */
         .cta-buttons {
             display: flex;
-            gap: 25px;
+            gap: 20px;
+            margin-bottom: 30px;
         }
+
         .btn {
-            padding: 20px 45px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: 0.4s;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .btn-work { background: #102a43; color: white; }
-        .btn-work:hover { background: #0091ea; transform: translateY(-7px); }
-        
-        .btn-contact { border: 3px solid #102a43; color: #102a43; }
-        .btn-contact:hover { background: #102a43; color: white; transform: translateY(-7px); }
 
-        /* ৫. এনিমেশন কীফ্রেম */
+        .btn-work { background: #102a43; color: white; border: none; cursor: pointer; }
+        .btn-work:hover { background: #0091ea; transform: translateY(-5px); }
+        
+        .btn-contact { border: 2px solid #102a43; color: #102a43; text-decoration: none; }
+        .btn-contact:hover { background: #102a43; color: white; transform: translateY(-5px); }
+
+        #offer-box {
+            max-width: 600px;
+            margin: 20px auto;
+            transition: all 0.5s ease;
+        }
+
         @keyframes popIn {
             from { transform: scale(0.5); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* ফুটার থেকে আপনার অনুরোধ মতো লেখা বাদ দেওয়া হয়েছে */
-        footer { padding: 40px; text-align: center; color: #627d98; font-weight: bold; font-size: 1rem; }
+        footer { padding: 30px; text-align: center; color: #627d98; font-size: 0.9rem; }
     </style>
 </head>
 <body>
+    <div style="text-align: right; padding: 10px;">
+        <button type="button" onclick="toggleDarkMode()" style="padding: 8px 15px; cursor: pointer; border-radius: 20px;">
+            Switch Appearance 🌙/☀️
+        </button>
+    </div>
 
     <nav>
-        <a href="index.html" class="nav-logo">
-            <img src="my-photo.jpg" alt="Sadia">
+        <a href="#" class="nav-logo">
+            <img src="my-photo.jpg.jpg" alt="Sadia">
             <span>SADIA AFRIN</span>
         </a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
+       <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -137,18 +189,72 @@
 
         <div class="hero-text">
             <h1>I'm <span>Sadia Afrin</span></h1>
-            <p>Finance Specialist & Digital Strategist delivering impactful solutions.</p>
+            <p>Finance Specialist & Digital Strategist delivering impactful solutions through Custom Web Development and Marketing.</p>
         </div>
-        
+         
         <div class="cta-buttons">
-            <a href="services.html" class="btn btn-work">My Services</a>
-            <a href="contact.html" class="btn btn-contact">Hire Me</a>
+            <button class="btn btn-work" onclick="showSpecialOffer()">See My Special Offer</button>
+            <a href="#" class="btn btn-contact">Hire Me</a>
         </div>
+
+        <div id="offer-box">
+            <h3 id="offer-text" style="color: #486581;">Interested in working with me?</h3>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center;">
+        <h4>Let's get to know each other!</h4>
+        <div style="margin: 15px 0;">
+            <input type="text" id="client-name" placeholder="Enter your name here" style="padding: 10px; width: 200px; border-radius: 5px; border: 1px solid #ccc;">
+            <button type="button" onclick="greetClient()" style="padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px;">Say Hello</button>
+        </div>
+        <p id="greeting-message" style="margin-top: 15px; font-style: italic; color: #555;"></p>
     </div>
 
     <footer>
         &copy; 2026 SADIA AFRIN | Khulna, Bangladesh
     </footer>
 
+    <script>
+    const developerName = "sadia Afrin";
+    const currency = "$";
+    let projectPrice = 100; 
+    let discount = 20;
+    let finalPrice = projectPrice - discount;
+
+    window.onload = function() {
+        alert("Hi! I am " + developerName + ". I can build your website for only " + currency + finalPrice);
+    };
+
+    function showSpecialOffer() {
+        let displayMessage = document.getElementById("offer-text");
+        if(displayMessage) {
+            displayMessage.innerHTML = "Special Offer: I will provide 1 Year of FREE Maintenance and SEO setup for your website!";
+            displayMessage.style.color = "blue";
+            displayMessage.style.backgroundColor = "#e7f3ff";
+            displayMessage.style.padding = "15px";
+            displayMessage.style.borderLeft = "5px solid blue";
+        }
+    }
+
+    function greetClient() {
+        let name = document.getElementById("client-name").value;
+        let messageDisplay = document.getElementById("greeting-message");
+
+        if (name.trim() === "") {
+            messageDisplay.innerHTML = "Please enter your name so I can greet you properly!";
+            messageDisplay.style.color = "red";
+        } else {
+            messageDisplay.innerHTML = "Hello " + name + "! It's a pleasure to meet you. How can I help you grow your business today?";
+            messageDisplay.style.color = "green";
+        }
+    }
+
+    function toggleDarkMode() {
+            let element = document.body;
+            element.classList.toggle("dark-theme");
+            console.log("Appearance changed!");
+        }
+</script>
 </body>
 </html>
